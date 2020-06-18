@@ -1,7 +1,13 @@
 <h2>タスクid:<%= @task.id %>のtask詳細ページ</h2>
-
-<p>タスク：<%=@task.content%></p>
-<p>ステータス：<%=@task.status %></p>
+<table class="table table-bordered">
+    <tr>
+        <th>タスク</th>
+        <td><%=@task.content%></td>
+    </tr>
+    <tr>
+        <th>ステータス</th>
+        <td><%=@task.status %></td>
+    </tr>
 
 <%= link_to '一覧に戻る', tasks_path %>
 <%= link_to 'このタスクを編集する', edit_task_path(@task) %>
